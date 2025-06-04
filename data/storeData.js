@@ -42,6 +42,11 @@ export const storeFeatures = [
     icon: Truck,
     title: "Fast Service",
     description: "Quick processing of all orders"
+  },
+  {
+    title: "Reasonable Prices",
+    icon: Percent,
+    description: "Competitive pricing on all products"
   }
 ];
 
