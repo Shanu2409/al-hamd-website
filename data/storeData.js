@@ -10,21 +10,20 @@ import {
 // Store Contact Information
 export const storeInfo = {
   name: "Al-Hamd Stationery",
-  tagline: "Premium Office & School Supplies",
-  whatsappNumber: "+923001234567",
-  phoneNumber: "+923001234567", 
-  email: "info@alhamdstationery.com",
+  tagline: "PACKAGING | GIFT ITEMS | TOYS & MORE",
+  whatsappNumber: "+918657282811",
+  phoneNumber: "+918657282811", 
+  email: "alhamdstationery1990@gmail.com",
   address: {
-    street: "123 Main Street, City Center",
-    landmark: "Near Central Mall",
-    city: "Karachi",
-    country: "Pakistan"
+    street: "Sukoon Heights, Kausa",
+    city: "Mumbra",
+    country: "India"
   },
   hours: {
-    weekdays: "Mon-Sat: 9:00 AM - 8:00 PM",
-    weekend: "Sunday: 10:00 AM - 6:00 PM"
+    weekdays: "Mon-Sat: 7:00 AM - 10:00 PM",
+    weekend: "Sunday: 7:00 AM - 10:00 PM"
   },
-  googleMapsUrl: "https://maps.google.com/?q=123+Main+Street+City+Center"
+  googleMapsUrl: "https://maps.google.com/?q=Sukoon+Heights,+Kausa,+Mumbra,+India"
 };
 
 // Store Features
@@ -33,11 +32,6 @@ export const storeFeatures = [
     icon: Package,
     title: "Wide Selection",
     description: "Over 1000+ products from trusted brands"
-  },
-  {
-    icon: Users,
-    title: "Expert Staff", 
-    description: "Knowledgeable team to help you choose"
   },
   {
     icon: Award,
@@ -60,28 +54,46 @@ export const productCategories = [
     description: "Premium pens, pencils, markers and more",
     products: [
       { 
-        name: "Luxury Fountain Pens", 
-        price: "₹500 - ₹2000", 
+        name: "Montex Winner Jumbo Gel Pen", 
+        price: "₹10/piece", 
         description: "Smooth writing experience with premium ink flow",
-        features: ["Premium nibs", "Refillable cartridges", "Gift packaging"]
+        features: ["Premium nibs", "Refillable cartridges", "Gift packaging"],
+        image: "/pens/1.png"
       },
       { 
-        name: "Gel Pens Set", 
-        price: "₹150 - ₹400", 
+        name: "Hauser XO 0.7mm Gell & Ball Pen", 
+        price: "₹10/piece", 
         description: "Vibrant colors, quick-dry ink, comfortable grip",
-        features: ["12 vibrant colors", "Quick-dry formula", "Ergonomic grip"]
+        features: ["3 vibrant colors", "Quick-dry formula", "Ergonomic grip"],
+        image: "/pens/2.png"
       },
       { 
-        name: "Mechanical Pencils", 
-        price: "₹100 - ₹300", 
-        description: "Precision writing with lead advance mechanism",
-        features: ["0.5mm & 0.7mm", "Lead indicator", "Non-slip grip"]
+        name: "Glitter Gel Pens", 
+        price: "₹20/piece", 
+        description: "Add sparkle to your notes with glitter gel pens",
+        features: ["Assorted colors", "Glitter finish", "Smooth application"],
+        image: "/pens/3.png"
       },
       { 
         name: "Highlighters Pack", 
-        price: "₹200 - ₹500", 
+        price: "₹20/piece",
+        image: "/pens/4.png", 
         description: "Fade-resistant, chisel tip, multiple colors",
         features: ["Fluorescent colors", "Chisel tip", "Long-lasting"]
+      },
+      {
+        name: "Permanent, Whiteboard, Acrylic Markers",
+        price: "₹20/piece",
+        description: "Versatile markers for all surfaces",
+        features: ["Permanent ink", "Chisel tip", "Quick-drying"],
+        image: "/pens/5.png"
+      },
+      {
+        name: "Erasable Ball Pens",
+        price: "₹20/piece",
+        description: "Smooth writing with erasable ink",
+        features: ["Erasable ink", "Comfort grip", "Vibrant colors"],
+        image: "/pens/6.jpg"
       }
     ]
   },
