@@ -9,7 +9,7 @@ import {
 
 // Store Contact Information
 export const storeInfo = {
-  name: "Al-Hamd Stationery",
+  name: "AL-HAMD STATIONERY",
   tagline: "PACKAGING | GIFT ITEMS | TOYS & MORE",
   whatsappNumber: "+918657282811",
   phoneNumber: "+918657282811", 
