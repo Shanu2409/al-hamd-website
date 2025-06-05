@@ -4,7 +4,8 @@
 import { 
   Phone, MapPin, Clock, MessageCircle, Mail, Star, ShoppingBag, 
   Pen, BookOpen, Palette, Calculator, Scissors, PenTool, Package, 
-  Users, Award, Truck, Gift, Percent, Crown, Sparkles, Timer, Zap, Heart 
+  Users, Award, Truck, Gift, Percent, Crown, Sparkles, Timer, Zap, Heart, 
+  School
 } from 'lucide-react';
 
 // Store Contact Information
@@ -104,33 +105,37 @@ export const productCategories = [
   },
   {
     id: 2,
-    title: "Notebooks & Diaries",
-    icon: BookOpen,
-    description: "Quality notebooks, diaries and journals",
+    title: "School Supplies",
+    icon: School,
+    description: "Complete range of school essentials for students",
     products: [
       { 
-        name: "Executive Diaries", 
-        price: "₹300 - ₹800", 
-        description: "Professional planners with calendar and organizer sections",
-        features: ["Monthly planner", "Address book", "Premium binding"]
+        name: "Pouches & Pencil Cases",
+        price: "₹30 - ₹250", 
+        description: "Stylish and functional storage for stationery",
+        features: ["Multiple compartments", "Durable material", "Variety of designs"],
+        image: "/schools/1.jpg"
       },
       { 
-        name: "Spiral Notebooks", 
-        price: "₹50 - ₹200", 
+        name: "Geometry Boxes",
+        price: "₹75 - ₹250", 
         description: "Durable wire binding, quality paper, various sizes",
-        features: ["80-200 pages", "Ruled/unruled", "Perforated sheets"]
+        features: ["Complete geometry set", "Durable case", "Compact design"],
+        image: "/schools/2.png"
       },
       { 
-        name: "Leather Journals", 
-        price: "₹600 - ₹1500", 
-        description: "Handcrafted leather cover with premium paper",
-        features: ["Genuine leather", "Handmade paper", "Elastic closure"]
+        name: "Tiffin Boxes",
+        price: "₹150 - ₹450", 
+        description: "Insulated, leak-proof containers for food storage",
+        features: ["Genuine leather", "Handmade paper", "Elastic closure"],
+        image: "/schools/3.jpg"
       },
       { 
-        name: "Student Notebooks", 
-        price: "₹30 - ₹100", 
-        description: "Subject-wise ruled notebooks for school use",
-        features: ["Subject labels", "Quality paper", "Durable covers"]
+        name: "Water Bottles",
+        price: "₹100 - ₹275",
+        description: "BPA-free, durable bottles for hydration",
+        features: ["BPA-free plastic", "Easy-grip design", "Leak-proof cap"],
+        image: "/schools/4.png"
       }
     ]
   },
@@ -142,59 +147,67 @@ export const productCategories = [
     products: [
       { 
         name: "Watercolor Sets", 
-        price: "₹400 - ₹1200", 
+        price: "₹30 - ₹300", 
         description: "Professional grade pigments with brushes included",
-        features: ["24-48 colors", "Premium brushes", "Mixing palette"]
+        features: ["24-48 colors", "Premium brushes", "Mixing palette"],
+        image: "/arts/1.png"
       },
       { 
-        name: "Sketch Pads", 
-        price: "₹150 - ₹500", 
-        description: "High-quality drawing paper for all mediums",
-        features: ["Acid-free paper", "Various textures", "Spiral bound"]
+        name: "Craft Papers", 
+        price: "₹5 - ₹100",
+        description: "High-quality colored and textured papers for crafts", 
+        features: ["Assorted colors", "Textured finishes", "Acid-free"],
+        image: "/arts/2.png"
       },
       { 
         name: "Colored Pencils", 
-        price: "₹200 - ₹800", 
+        price: "₹90 - ₹250", 
         description: "Rich pigmentation, smooth application, break-resistant",
-        features: ["24-72 colors", "Break-resistant", "Smooth blending"]
+        features: ["24-72 colors", "Break-resistant", "Smooth blending"],
+        image: "/arts/3.jpg"
       },
       { 
         name: "Craft Materials", 
-        price: "₹100 - ₹600", 
-        description: "Complete craft kits for creative projects",
-        features: ["All-in-one kits", "Instructions included", "Safe materials"]
+        price: "₹5 - ₹100", 
+        description: "All types of craft materials for DIY projects",
+        features: ["Assorted materials", "Eco-friendly options", "Variety of textures"],
+        image: "/arts/4.png"
       }
     ]
   },
   {
     id: 4,
-    title: "Office Essentials",
-    icon: Calculator,
-    description: "Professional office and business supplies",
+    title: "Books & Paper Products",
+    icon: BookOpen,
+    description: "Notebooks, diaries, and necessary supplies for all needs",
     products: [
       { 
         name: "File Folders", 
-        price: "₹50 - ₹200", 
+        price: "₹30 - ₹350", 
         description: "Organized storage solutions for documents",
-        features: ["Multiple sizes", "Tab labels", "Durable material"]
+        features: ["Multiple sizes", "Tab labels", "Durable material"],
+        image: "/books/1.png"
       },
       { 
         name: "Calculators", 
-        price: "₹300 - ₹1500", 
+        price: "₹150 - ₹250", 
         description: "Scientific and basic calculators for all needs",
-        features: ["Solar powered", "Scientific functions", "Large display"]
+        features: ["Solar powered", "Scientific functions", "Large display"],
+        image: "/books/2.png"
       },
       { 
         name: "Staplers & Clips", 
-        price: "₹100 - ₹400", 
+        price: "₹70 - ₹150", 
         description: "Heavy-duty staplers and organizing accessories",
-        features: ["Heavy-duty", "Multiple sizes", "Jam-resistant"]
+        features: ["Heavy-duty", "Multiple sizes", "Jam-resistant"],
+        image: "/books/3.png"
       },
       { 
-        name: "Office Organizers", 
-        price: "₹200 - ₹800", 
-        description: "Desktop organizers for efficient workspace",
-        features: ["Multiple compartments", "Durable plastic", "Stackable design"]
+        name: "Books & diaries",
+        price: "₹20 - ₹250", 
+        description: "Variety of notebooks, diaries, and planners",
+        features: ["Multiple sizes", "Variety of designs", "Quality paper"],
+        image: "/books/4.png"
       }
     ]
   },
