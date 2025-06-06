@@ -14,8 +14,7 @@ import {
   heroContent 
 } from '../data/storeData.js';
 
-export default function Home() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+export default function Home() {  const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedLimitedProduct, setSelectedLimitedProduct] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -24,11 +23,20 @@ export default function Home() {
     // Add keyboard event listener for ESC key
     const handleKeyDown = (event) => {
       if (event.key === 'Escape' && selectedCategory) {
+        closeModal();
+      }
+    };
+
+    // Handle browser back button
+    const handlePopState = (event) => {
+      if (selectedCategory) {
+        event.preventDefault();
         setSelectedCategory(null);
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('popstate', handlePopState);
     
     // Prevent body scroll when modal is open
     if (selectedCategory) {
@@ -39,9 +47,20 @@ export default function Home() {
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('popstate', handlePopState);
       document.body.style.overflow = 'unset';
     };
   }, [selectedCategory]);
+
+  const closeModal = () => {
+    setSelectedCategory(null);
+  };
+
+  const openModal = (category) => {
+    // Push state when opening modal to handle back button
+    window.history.pushState({ modalOpen: true }, '', window.location.href);
+    setSelectedCategory(category);
+  };
 
   const handleWhatsApp = (productName = '') => {
     const message = productName 
@@ -397,7 +416,7 @@ export default function Home() {
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => openModal(category)}
               >
                 <div className="bg-gradient-to-r from-amber-500 to-orange-500 p-3 sm:p-4 rounded-full w-fit mx-auto mb-3 sm:mb-4">
                   <category.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
@@ -413,14 +432,13 @@ export default function Home() {
         </div>
       </section>      {/* Product Modal - Mobile-First Design */}
       <AnimatePresence>
-        {selectedCategory && (
-          <motion.div
+        {selectedCategory && (          <motion.div
             className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            onClick={() => setSelectedCategory(null)}
+            onClick={closeModal}
           >
             <motion.div
               className="bg-white w-full h-[90vh] sm:h-auto sm:max-h-[90vh] sm:max-w-4xl sm:rounded-2xl overflow-hidden flex flex-col shadow-2xl"
@@ -430,10 +448,9 @@ export default function Home() {
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               drag="y"
               dragConstraints={{ top: 0, bottom: 0 }}
-              dragElastic={0.3}
-              onDragEnd={(event, info) => {
+              dragElastic={0.3}              onDragEnd={(event, info) => {
                 if (info.offset.y > 150 || info.velocity.y > 800) {
-                  setSelectedCategory(null);
+                  closeModal();
                 }
               }}
               onClick={(e) => e.stopPropagation()}
@@ -445,9 +462,8 @@ export default function Home() {
 
               {/* Enhanced Header with better mobile visibility */}
               <div className="bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-4 sm:p-6 flex-shrink-0 relative">
-                {/* Close button - repositioned for better mobile access */}
-                <motion.button
-                  onClick={() => setSelectedCategory(null)}
+                {/* Close button - repositioned for better mobile access */}                <motion.button
+                  onClick={closeModal}
                   className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/25 hover:bg-white/35 active:bg-white/45 backdrop-blur-sm text-white rounded-full p-2.5 sm:p-3 flex items-center justify-center touch-manipulation shadow-lg z-10"
                   aria-label="Close modal"
                   whileHover={{ scale: 1.05 }}
