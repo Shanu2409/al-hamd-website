@@ -136,6 +136,13 @@ export const productCategories = [
         description: "BPA-free, durable bottles for hydration",
         features: ["BPA-free plastic", "Easy-grip design", "Leak-proof cap"],
         image: "/schools/4.png"
+      },
+      {
+        name: "Book Covers",
+        price: "₹70 - ₹100",
+        description: "Protective covers for books and notebooks",
+        features: ["Water-resistant", "Durable material", "Variety of designs"],
+        image: "/schools/5.png"
       }
     ]
   },
@@ -172,7 +179,22 @@ export const productCategories = [
         description: "All types of craft materials for DIY projects",
         features: ["Assorted materials", "Eco-friendly options", "Variety of textures"],
         image: "/arts/4.png"
+      },
+      { 
+        name: "Clay & Modeling Tools",
+        price: "₹10 - ₹250", 
+        description: "All types of clay and modeling tools for creative projects",
+        features: ["Assorted tools", "Eco-friendly options", "Variety of textures"],
+        image: "/arts/5.png"
+      },
+      { 
+        name: "Different Types of Tapes & Adhesives",
+        price: "₹5 - ₹100",
+        description: "High-quality tapes and adhesives for all projects",
+        features: ["Strong adhesion", "Variety of sizes", "Easy to use"],
+        image: "/arts/6.png"
       }
+
     ]
   },
   {
@@ -213,33 +235,37 @@ export const productCategories = [
   },
   {
     id: 5,
-    title: "School Supplies",
-    icon: ShoppingBag,
-    description: "Complete range for students of all ages",
+    title: "Zerox & Printing Services",
+    icon: PenTool,
+    description: "Professional printing and copying services for all needs",
     products: [
       { 
-        name: "School Bags", 
-        price: "₹800 - ₹2500", 
-        description: "Ergonomic designs with multiple compartments",
-        features: ["Ergonomic design", "Water-resistant", "Multiple pockets"]
+        name: "Zerox & Copying", 
+        price: "₹1.5 / page", 
+        description: "High-quality copying services for documents",
+        features: ["Black & white", "Color copies", "Fast service"],
+        image: "/zerox/1.png"
       },
       { 
-        name: "Geometry Sets", 
-        price: "₹150 - ₹400", 
-        description: "Complete mathematical instruments for students",
-        features: ["Compass & protractor", "Quality instruments", "Storage box"]
+        name: "B/W Printing Services", 
+        price: "₹5 / page", 
+        description: "Professional printing for all types of documents",
+        features: ["High-quality prints", "Multiple formats", "Fast turnaround"],
+        image: "/zerox/2.png"
       },
       { 
-        name: "Lunch Boxes", 
-        price: "₹200 - ₹600", 
-        description: "Insulated, leak-proof containers for food storage",
-        features: ["Leak-proof seal", "Insulated design", "BPA-free"]
+        name: "Color Printing Services", 
+        price: "₹5 / page", 
+        description: "Professional printing for all types of documents",
+        features: ["High-quality color prints", "Multiple formats", "Fast turnaround"],
+        image: "/zerox/3.png"
       },
       { 
-        name: "Water Bottles", 
-        price: "₹150 - ₹500", 
-        description: "BPA-free, durable bottles for hydration",
-        features: ["BPA-free plastic", "Easy-grip design", "Leak-proof cap"]
+        name: "Lamination Services",
+        price: "₹20 - ₹50", 
+        description: "Protective lamination for documents and photos",
+        features: ["Glossy or matte finish", "Durable protection", "Custom sizes"],
+        image: "/zerox/4.png"
       }
     ]
   },
@@ -250,29 +276,41 @@ export const productCategories = [
     description: "Unique and specialized stationery products",
     products: [
       { 
-        name: "Paper Shredders", 
-        price: "₹1500 - ₹5000", 
-        description: "Cross-cut shredding for document security",
-        features: ["Cross-cut shredding", "Auto-start/stop", "Overload protection"]
+        name: "Magic Pens", 
+        price: "₹30 / piece", 
+        description: "Magical pens that change color with heat",
+        features: ["Color-changing ink", "Ergonomic design", "Refillable cartridges"],
+        image: "/specialty/1.png"
       },
       { 
-        name: "Laminating Machines", 
-        price: "₹2000 - ₹8000", 
-        description: "Professional lamination for document protection",
-        features: ["Hot & cold lamination", "Multiple sizes", "Temperature control"]
+        name: "Keychains", 
+        price: "₹10 - ₹150", 
+        description: "Stylish keychains for personal or corporate use",
+        features: [ "Durable material", "Variety of styles"],
+        image: "/specialty/2.png"
       },
       { 
-        name: "Label Makers", 
-        price: "₹1000 - ₹3000", 
-        description: "Create custom labels for organization",
-        features: ["Multiple fonts", "Various tape widths", "Easy printing"]
+        name: "Stress & Mood Balls",
+        price: "₹20 / piece", 
+        description: "Stress relief balls for relaxation and focus",
+        features: ["Variety of shapes", "Durable material", "Customizable designs"],
+        image: "/specialty/3.png"
       },
       { 
-        name: "Binding Machines", 
-        price: "₹3000 - ₹10000", 
-        description: "Professional document binding solutions",
-        features: ["Comb & spiral binding", "Heavy-duty punch", "Professional finish"]
-      }
+        name: "Fancy Pens", 
+        price: "₹20 - ₹50", 
+        description: "Stylish pens with unique designs for gifting",
+        features: ["Comb & spiral binding", "Heavy-duty punch", "Professional finish"],
+        image: "/specialty/4.png"
+      },
+      { 
+        name: "Unbreakable Scale Rulers", 
+        price: "₹20 - ₹100", 
+        description: "Durable and flexible rulers for precise measurements",
+        features: ["Unbreakable material", "Flexible design", "Clear markings"],
+        image: "/specialty/5.jpg"
+      },
+      
     ]
   }
 ];
