@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Al-Hamd Stationery - Premium Office & School Supplies",
+  title: "Al-Hamd Stationery",
   description: "Discover our extensive collection of premium stationery products including pens, notebooks, art supplies, and office essentials. Quality stationery for students, professionals, and artists.",
 };
 
