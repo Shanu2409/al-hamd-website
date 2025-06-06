@@ -479,18 +479,23 @@ export default function Home() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
                       whileHover={{ scale: 1.02 }}
-                    >
-                      <div className="bg-gradient-to-br from-amber-100 via-orange-100 to-amber-100 h-32 sm:h-40 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                    >                      <div className="bg-gradient-to-br from-amber-100 via-orange-100 to-amber-100 h-48 sm:h-52 md:h-48 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
                         {product.image ? (
                           <img
                             src={product.image}
                             alt={product.name}
-                            className="object-contain w-full h-full"
+                            className="w-full h-full object-contain sm:object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                            style={{ 
+                              objectPosition: 'center',
+                              maxWidth: '100%',
+                              maxHeight: '100%'
+                            }}
+                            loading="lazy"
                           />
                         ) : (
-                          <div className="text-gray-400 text-sm italic">No Image Available</div>
+                          <div className="text-gray-400 text-sm italic text-center px-4">No Image Available</div>
                         )}
-                        <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/5 rounded-lg"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/5 rounded-lg pointer-events-none"></div>
                       </div>
                       
                       <h4 className="font-semibold text-base sm:text-lg mb-2 text-gray-800 leading-tight">{product.name}</h4>

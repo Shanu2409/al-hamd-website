@@ -255,7 +255,7 @@ export const productCategories = [
       },
       { 
         name: "Color Printing Services", 
-        price: "₹5 / page", 
+        price: "₹10 / page", 
         description: "Professional printing for all types of documents",
         features: ["High-quality color prints", "Multiple formats", "Fast turnaround"],
         image: "/zerox/3.png"
