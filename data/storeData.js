@@ -297,7 +297,7 @@ export const productCategories = [
         image: "/specialty/2.png"
       },
       { 
-        name: "Stress & Mood Balls",
+        name: "Stress & Moon Balls",
         price: "₹20 / piece", 
         description: "Stress relief balls for relaxation and focus",
         features: ["Variety of shapes", "Durable material", "Customizable designs"],
