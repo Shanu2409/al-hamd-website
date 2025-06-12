@@ -182,8 +182,9 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
             </div>
           </motion.div>
         </div>
-      </section>{/* Limited Edition Products */}
-      <section className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-gradient-to-r from-amber-50 to-orange-50">
+      </section>
+      {/* Limited Edition Products */}
+      {/* <section className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-gradient-to-r from-amber-50 to-orange-50">
         <div className="container mx-auto">
           <motion.div
             className="text-center mb-12 sm:mb-16"
@@ -214,13 +215,11 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
                 whileHover={{ scale: 1.02, y: -5 }}
                 onClick={() => setSelectedLimitedProduct(product)}
               >
-                {/* Limited Edition Badge */}
                 <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-semibold z-10">
                   {product.badge}
                 </div>
                 
-                {/* Product Image Placeholder */}
-                <div className="bg-gradient-to-br from-amber-100 to-orange-100 h-36 sm:h-48 rounded-lg mb-3 sm:mb-4 flex items-center justify-center relative">
+              <div className="bg-gradient-to-br from-amber-100 to-orange-100 h-36 sm:h-48 rounded-lg mb-3 sm:mb-4 flex items-center justify-center relative">
                   <motion.div
                     animate={{ 
                       rotate: [0, 5, -5, 0],
@@ -242,7 +241,6 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
                 <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-800 leading-tight">{product.name}</h3>
                 <p className="text-gray-600 text-sm mb-3 sm:mb-4 leading-relaxed">{product.description}</p>
                 
-                {/* Price */}
                 <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-3 sm:mb-4">
                   <span className="text-xl sm:text-2xl font-bold text-amber-600">{product.price}</span>
                   <span className="text-base sm:text-lg text-gray-500 line-through">{product.originalPrice}</span>
@@ -267,8 +265,11 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
         {/* Promotional Offers */}
+
+        
       {/* <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <motion.div

@@ -241,7 +241,7 @@ export const productCategories = [
     products: [
       { 
         name: "Zerox & Copying", 
-        price: "₹1.5 / page", 
+        price: "₹2 / page", 
         description: "High-quality copying services for documents",
         features: ["Black & white", "Color copies", "Fast service"],
         image: "/zerox/1.png"
@@ -266,6 +266,13 @@ export const productCategories = [
         description: "Protective lamination for documents and photos",
         features: ["Glossy or matte finish", "Durable protection", "Custom sizes"],
         image: "/zerox/4.png"
+      },
+      { 
+        name: "Government Documents & Certificates",
+        price: "₹20 - ₹50", 
+        description: "Professional lamination for government documents and certificates",
+        features: ["High-quality lamination", "Custom sizes", "Fast service"],
+        image: "/zerox/5.png"
       }
     ]
   },
@@ -407,18 +414,18 @@ export const promotionalOffers = [
 // Customer Testimonials
 export const testimonials = [
   {
-    name: "Ahmed Hassan",
-    role: "Business Owner",
-    content: "Al-Hamd Stationery has been our go-to supplier for years. Quality products and excellent service!",
-    rating: 5,
-    image: "👨‍💼"
-  },
-  {
-    name: "Fatima Ali", 
+    name: "Kasiba B4", 
     role: "Teacher",
-    content: "Best place for school supplies in the area. The staff is knowledgeable and helpful.",
+    content: "Best place for school supplies in the area. Budget friendly and great quality!",
     rating: 5,
     image: "👩‍🏫"
+  },
+  {
+    name: "Shanukumar Singh",
+    role: "Working Professional",
+    content: "Al-Hamd Stationery has been our go-to supplier for all types of stationery. Quality products and excellent service!",
+    rating: 5,
+    image: "👨‍💼"
   },
   {
     name: "Mohammad Khan",
@@ -426,20 +433,6 @@ export const testimonials = [
     content: "Great variety of products at reasonable prices. My favorite stationery store!",
     rating: 5,
     image: "👨‍🎓"
-  },
-  {
-    name: "Sarah Ahmed",
-    role: "Artist",
-    content: "Their art supplies are top-notch! Perfect for my professional artwork.",
-    rating: 5,
-    image: "👩‍🎨"
-  },
-  {
-    name: "Ali Raza",
-    role: "Office Manager",
-    content: "Bulk orders are handled professionally with great discounts. Highly recommended!",
-    rating: 5,
-    image: "👨‍💻"
   },
   {
     name: "Zainab Khan",
