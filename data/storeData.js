@@ -5,26 +5,29 @@ import {
   Phone, MapPin, Clock, MessageCircle, Mail, Star, ShoppingBag, 
   Pen, BookOpen, Palette, Calculator, Scissors, PenTool, Package, 
   Users, Award, Truck, Gift, Percent, Crown, Sparkles, Timer, Zap, Heart, 
-  School
+  School, Facebook, Instagram
 } from 'lucide-react';
 
 // Store Contact Information
 export const storeInfo = {
   name: "AL-HAMD STATIONERY",
   tagline: "PACKAGING | GIFT ITEMS | TOYS & MORE",
-  whatsappNumber: "+918657282811",
-  phoneNumber: "+918657282811", 
+  whatsappNumber: "+91 8657282811",
+  phoneNumber: "+91 8657282811", 
   email: "alhamdstationery1990@gmail.com",
   address: {
-    street: "Sukoon Heights, Kausa",
-    city: "Mumbra",
-    country: "India"
+    street: "Shop no.66, Grace Square C2, opposite Stadium, Mumbra, Thane - 400612",
   },
   hours: {
-    weekdays: "Mon-Sat: 7:00 AM - 10:00 PM",
-    weekend: "Sunday: 7:00 AM - 10:00 PM"
+    weekdays: "Mon-Sun: 6:30 AM - 10:30 PM",
   },
-  googleMapsUrl: "https://maps.google.com/?q=Sukoon+Heights,+Kausa,+Mumbra,+India"
+  googleMapsUrl: "https://maps.app.goo.gl/r5iprZheVypSa1d7A",
+  socialMedia: {
+    facebook: "https://www.facebook.com/share/1Ehe3fT2iF/",
+    instagram: "https://www.instagram.com/alhamd_stationery_1990?igsh=OGJqbWxqczllb2l0",
+    facebookHandle: "@Al-Hamd-Stationery",
+    instagramHandle: "@alhamd_stationery_1990"
+  }
 };
 
 // Store Features

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, MapPin, Clock, MessageCircle, Mail, Star, ShoppingBag, Pen, BookOpen, Palette, Calculator, Scissors, PenTool, Package, Users, Award, Truck, Gift, Percent, Crown, Sparkles, Timer, Zap, Heart } from 'lucide-react';
+import { Phone, MapPin, Clock, MessageCircle, Mail, Star, ShoppingBag, Pen, BookOpen, Palette, Calculator, Scissors, PenTool, Package, Users, Award, Truck, Gift, Percent, Crown, Sparkles, Timer, Zap, Heart, Facebook, Instagram } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { 
   storeInfo, 
@@ -72,14 +72,21 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
   const handleCall = () => {
     window.open(`tel:${storeInfo.phoneNumber}`, '_blank');
   };
-
   const handleEmail = () => {
     window.open(`mailto:${storeInfo.email}?subject=Inquiry about Stationery Products`, '_blank');
   };
 
+  const handleFacebook = () => {
+    window.open(storeInfo.socialMedia.facebook, '_blank');
+  };
+
+  const handleInstagram = () => {
+    window.open(storeInfo.socialMedia.instagram, '_blank');
+  };
+
   const handleDirections = () => {
     window.open(storeInfo.googleMapsUrl, '_blank');
-  };  return (
+  };return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">      {/* Header */}      <motion.header 
         className="bg-gradient-to-r from-amber-900 via-amber-800 to-orange-900 shadow-lg sticky top-0 z-50 border-b-2 border-amber-300"
         initial={{ y: -100 }}
@@ -104,8 +111,7 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
                 </h1>
                 <p className="text-amber-100 text-xs sm:text-sm hidden xs:block">{storeInfo.tagline}</p>
               </div>
-            </motion.div>
-              <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 flex-shrink-0">
+            </motion.div>              <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 flex-shrink-0">
               <motion.button
                 onClick={() => handleWhatsApp()}
                 className="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white px-2 py-2 xs:px-3 xs:py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 rounded-full flex items-center space-x-1 sm:space-x-2 transition-all shadow-lg hover:shadow-xl text-xs xs:text-sm sm:text-base min-h-[40px] touch-manipulation"
@@ -126,6 +132,29 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
                 <span className="hidden xs:inline sm:hidden">Call</span>
                 <span className="hidden sm:inline">Call Now</span>
               </motion.button>
+              
+              {/* Social Media Icons - Only visible on larger screens */}
+              <div className="hidden md:flex items-center space-x-2">
+                <motion.button
+                  onClick={handleFacebook}
+                  className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white p-2 sm:p-3 rounded-full transition-all shadow-lg hover:shadow-xl min-h-[40px] min-w-[40px] touch-manipulation"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  title="Follow us on Facebook"
+                >
+                  <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
+                </motion.button>
+                
+                <motion.button
+                  onClick={handleInstagram}
+                  className="bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 active:from-purple-700 active:to-pink-700 text-white p-2 sm:p-3 rounded-full transition-all shadow-lg hover:shadow-xl min-h-[40px] min-w-[40px] touch-manipulation"
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                  title="Follow us on Instagram"
+                >
+                  <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
+                </motion.button>
+              </div>
             </div>
           </div>
         </div>
@@ -136,7 +165,7 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
             transition={{ duration: 1 }}
-          >            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-amber-700 via-orange-600 to-amber-600 bg-clip-text text-transparent leading-tight px-2">
+          >            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent leading-tight px-2">
               {heroContent.title}
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
@@ -161,8 +190,35 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
               >
                 <Phone className="h-5 w-5 sm:h-6 sm:w-6" />
                 <span>{heroContent.secondaryCTA}</span>
-              </motion.button>
-            </div>
+              </motion.button>            </div>
+
+            {/* Social Media Follow Section */}
+            <motion.div 
+              className="flex items-center justify-center space-x-6 mb-8 sm:mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
+            >
+              <div className="flex items-center space-x-4">
+                <span className="text-gray-600 text-sm sm:text-base font-medium">Follow us:</span>
+                <motion.button
+                  onClick={handleFacebook}
+                  className="bg-blue-600 hover:bg-blue-700 p-2 sm:p-3 rounded-full transition-all shadow-md hover:shadow-lg"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Facebook className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                </motion.button>
+                <motion.button
+                  onClick={handleInstagram}
+                  className="bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-2 sm:p-3 rounded-full transition-all shadow-md hover:shadow-lg"
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Instagram className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                </motion.button>
+              </div>
+            </motion.div>
 
             {/* Store Features */}
             <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto px-2">
@@ -609,7 +665,7 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:grid-rows-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-br from-green-50 to-green-100 p-6 sm:p-8 rounded-2xl text-center"
               whileHover={{ scale: 1.05, y: -5 }}
@@ -645,8 +701,53 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
                 className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-3 sm:px-6 sm:py-3 rounded-full transition-all text-sm sm:text-base min-h-[44px] touch-manipulation"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+              >                Call Now
+              </motion.button>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 sm:p-8 rounded-2xl text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-blue-600 p-3 sm:p-4 rounded-full w-fit mx-auto mb-3 sm:mb-4">
+                <Facebook className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+              </div>
+              <h3 className="font-bold text-base sm:text-lg mb-2 text-gray-800">Facebook</h3>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">Follow for updates</p>
+              <motion.button
+                onClick={handleFacebook}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 sm:px-6 sm:py-3 rounded-full transition-all text-sm sm:text-base min-h-[44px] touch-manipulation"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Call Now
+                Follow Us
+              </motion.button>
+            </motion.div>
+
+            <motion.div
+              className="bg-gradient-to-br from-pink-50 to-purple-100 p-6 sm:p-8 rounded-2xl text-center"
+              whileHover={{ scale: 1.05, y: -5 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-3 sm:p-4 rounded-full w-fit mx-auto mb-3 sm:mb-4">
+                <Instagram className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+              </div>
+              <h3 className="font-bold text-base sm:text-lg mb-2 text-gray-800">Instagram</h3>
+              <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">See our products</p>
+              <motion.button
+                onClick={handleInstagram}
+                className="bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-3 sm:px-6 sm:py-3 rounded-full transition-all text-sm sm:text-base min-h-[44px] touch-manipulation"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Follow Us
               </motion.button>
             </motion.div>
 
@@ -704,8 +805,8 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
               </div>
               <p className="text-gray-400 mb-3 sm:mb-4 text-sm sm:text-base">
                 Your trusted partner for all stationery needs. Quality products, excellent service, and competitive prices.
-              </p>
-              <div className="flex space-x-3 sm:space-x-4">                <motion.button
+              </p>              <div className="flex space-x-3 sm:space-x-4">
+                <motion.button
                   onClick={() => handleWhatsApp()}
                   className="bg-green-500 hover:bg-green-600 p-2 rounded-full"
                   whileHover={{ scale: 1.1 }}
@@ -718,6 +819,22 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
                   whileHover={{ scale: 1.1 }}
                 >
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
+                </motion.button>
+                <motion.button
+                  onClick={handleFacebook}
+                  className="bg-blue-600 hover:bg-blue-700 p-2 rounded-full"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  title="Follow us on Facebook"
+                >
+                  <Facebook className="h-4 w-4 sm:h-5 sm:w-5" />
+                </motion.button>
+                <motion.button
+                  onClick={handleInstagram}
+                  className="bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 p-2 rounded-full"
+                  whileHover={{ scale: 1.1, rotate: -5 }}
+                  title="Follow us on Instagram"
+                >
+                  <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                 </motion.button>
               </div>
             </div>
@@ -738,16 +855,29 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
                   <span>{storeInfo.hours.weekdays}</span>
                 </div>
               </div>
-            </div>
-
-            <div>
-              <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h4>
-              <div className="space-y-2 text-gray-400 text-sm sm:text-base">
-                <div>Our Products</div>
-                <div>Limited Edition</div>
-                <div>Special Offers</div>
-                <div>Store Location</div>
-                <div>Contact Us</div>
+            </div>            <div>
+              <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Follow Us</h4>
+              <div className="space-y-3 text-gray-400 text-sm sm:text-base">
+                <motion.div 
+                  className="flex items-center space-x-3 cursor-pointer hover:text-blue-400 transition-colors"
+                  onClick={handleFacebook}
+                  whileHover={{ x: 5 }}
+                >
+                  <Facebook className="h-4 w-4 text-blue-500" />
+                  <span>{storeInfo.socialMedia.facebookHandle}</span>
+                </motion.div>
+                <motion.div 
+                  className="flex items-center space-x-3 cursor-pointer hover:text-pink-400 transition-colors"
+                  onClick={handleInstagram}
+                  whileHover={{ x: 5 }}
+                >
+                  <Instagram className="h-4 w-4 text-pink-500" />
+                  <span>{storeInfo.socialMedia.instagramHandle}</span>
+                </motion.div>
+                <div className="mt-4 text-xs text-gray-500">
+                  <p>Follow us for daily updates,</p>
+                  <p>product showcases & special offers!</p>
+                </div>
               </div>
             </div>
           </div>
@@ -756,7 +886,35 @@ export default function Home() {  const [selectedCategory, setSelectedCategory] 
             <p>&copy; 2025 {storeInfo.name}. All rights reserved. | Built with ❤️ for our valued customers</p>
           </div>
         </div>
-      </footer>      {/* Floating WhatsApp Button */}      <motion.button
+      </footer>      {/* Floating Social Media Buttons */}      <div className="fixed left-4 bottom-4 sm:left-6 sm:bottom-6 flex flex-col space-y-3 z-40">
+        <motion.button
+          onClick={handleFacebook}
+          className="bg-blue-600 hover:bg-blue-700 text-white p-3 sm:p-4 rounded-full shadow-lg min-h-[56px] min-w-[56px] touch-manipulation"
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ scale: 0, x: -100 }}
+          animate={{ scale: 1, x: 0 }}
+          transition={{ delay: 2.5, type: "spring", stiffness: 500 }}
+          title="Follow us on Facebook"
+        >
+          <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
+        </motion.button>
+
+        <motion.button
+          onClick={handleInstagram}
+          className="bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-3 sm:p-4 rounded-full shadow-lg min-h-[56px] min-w-[56px] touch-manipulation"
+          whileHover={{ scale: 1.1, rotate: -5 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ scale: 0, x: -100 }}
+          animate={{ scale: 1, x: 0 }}
+          transition={{ delay: 3, type: "spring", stiffness: 500 }}
+          title="Follow us on Instagram"
+        >
+          <Instagram className="h-5 w-5 sm:h-6 sm:w-6" />
+        </motion.button>
+      </div>
+
+      {/* Floating WhatsApp Button */}      <motion.button
         onClick={() => handleWhatsApp()}
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-lg z-40 min-h-[56px] min-w-[56px] touch-manipulation"
         whileHover={{ scale: 1.1 }}
