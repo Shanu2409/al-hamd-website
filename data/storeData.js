@@ -21,7 +21,7 @@ export const storeInfo = {
   hours: {
     weekdays: "Mon-Sun: 6:30 AM - 10:30 PM",
   },
-  googleMapsUrl: "https://maps.app.goo.gl/r5iprZheVypSa1d7A",
+  googleMapsUrl: "https://maps.app.goo.gl/91eeNHgsnAC7tA2u9",
   socialMedia: {
     facebook: "https://www.facebook.com/share/1Ehe3fT2iF/",
     instagram: "https://www.instagram.com/alhamd_stationery_1990?igsh=OGJqbWxqczllb2l0",
